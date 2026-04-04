@@ -1,0 +1,551 @@
+09:39:11.432 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:39:16.212 [pool-2-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+09:39:16.212 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+09:39:17.454 [pool-2-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://jsonplaceholder.typicode.com/users
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 160
+1 > Host: jsonplaceholder.typicode.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test User","username":"testuser","email":"test@user.com","address":{"street":"Has No Name","suite":"Apt. 123","city":"Electri","zipcode":"54321-6789"}}
+
+09:39:17.454 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > GET https://jsonplaceholder.typicode.com/users
+1 > Host: jsonplaceholder.typicode.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:39:18.824 [pool-2-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 1370
+1 < 201
+1 < Date: Sat, 04 Apr 2026 14:39:18 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 216
+1 < Connection: keep-alive
+1 < access-control-allow-credentials: true
+1 < access-control-expose-headers: Location
+1 < Cache-Control: no-cache
+1 < etag: W/"d8-pYV7+YuMGP2hxHPU9ARrf97ifDA"
+1 < expires: -1
+1 < location: https://jsonplaceholder.typicode.com/users/11
+1 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < pragma: no-cache
+1 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=baGIzssLK%2BcPimia3b8JYVDQg0Vrg2cwuvaq9jy5eTg%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1775313558"}],"max_age":3600}
+1 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=baGIzssLK%2BcPimia3b8JYVDQg0Vrg2cwuvaq9jy5eTg%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1775313558"
+1 < Server: cloudflare
+1 < vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < via: 2.0 heroku-router
+1 < x-content-type-options: nosniff
+1 < x-powered-by: Express
+1 < x-ratelimit-limit: 1000
+1 < x-ratelimit-remaining: 999
+1 < x-ratelimit-reset: 1775313566
+1 < cf-cache-status: DYNAMIC
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=3,cfOrigin;dur=25
+1 < CF-RAY: 9e710fcc6cf09ac3-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+09:39:18.902 [pool-2-thread-2] INFO  com.intuit.karate - [print] created id is:  11 
+09:39:19.096 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1370
+1 < 200
+1 < Date: Sat, 04 Apr 2026 14:39:18 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Connection: keep-alive
+1 < access-control-allow-credentials: true
+1 < Cache-Control: max-age=43200
+1 < etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"
+1 < expires: -1
+1 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < pragma: no-cache
+1 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=mdG6FZceBOKwkJ8LF53r6qFS5le4d%2F7VImcZ%2FSYrIOo%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1775212188"}],"max_age":3600}
+1 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=mdG6FZceBOKwkJ8LF53r6qFS5le4d%2F7VImcZ%2FSYrIOo%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1775212188"
+1 < Server: cloudflare
+1 < vary: Origin, Accept-Encoding
+1 < via: 2.0 heroku-router
+1 < x-content-type-options: nosniff
+1 < x-powered-by: Express
+1 < x-ratelimit-limit: 1000
+1 < x-ratelimit-remaining: 999
+1 < x-ratelimit-reset: 1775212227
+1 < Age: 10683
+1 < Accept-Ranges: bytes
+1 < cf-cache-status: HIT
+1 < Server-Timing: cfCacheStatus;desc="HIT"
+1 < Server-Timing: cfEdge;dur=6,cfOrigin;dur=0
+1 < CF-RAY: 9e710fcc69138b48-TPA
+1 < alt-svc: h3=":443"; ma=86400
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+
+09:39:19.221 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+2 > GET https://jsonplaceholder.typicode.com/users/1
+2 > Host: jsonplaceholder.typicode.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+09:39:19.530 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 309
+2 < 200
+2 < Date: Sat, 04 Apr 2026 14:39:19 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < access-control-allow-credentials: true
+2 < Cache-Control: max-age=43200
+2 < etag: W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"
+2 < expires: -1
+2 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+2 < pragma: no-cache
+2 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=XTBzxYe%2FEO4F0Sur3ThSnUjMaf6FjiNyjDPrQ5sc0l0%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1775312663"}],"max_age":3600}
+2 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=XTBzxYe%2FEO4F0Sur3ThSnUjMaf6FjiNyjDPrQ5sc0l0%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1775312663"
+2 < Server: cloudflare
+2 < vary: Origin, Accept-Encoding
+2 < via: 2.0 heroku-router
+2 < x-content-type-options: nosniff
+2 < x-powered-by: Express
+2 < x-ratelimit-limit: 1000
+2 < x-ratelimit-remaining: 983
+2 < x-ratelimit-reset: 1775312666
+2 < Age: 895
+2 < Server-Timing: cfCacheStatus;desc="HIT"
+2 < Server-Timing: cfEdge;dur=9,cfOrigin;dur=0
+2 < cf-cache-status: HIT
+2 < CF-RAY: 9e710fd108789341-MIA
+2 < alt-svc: h3=":443"; ma=86400
+{
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+
+09:39:23.225 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:examples/users/users.feature
+09:59:14.610 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:59:19.057 [main] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:20.203 [main] DEBUG com.intuit.karate - request:
+1 > GET https://automationexercise.com/api/productsList
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:59:27.004 [main] DEBUG com.intuit.karate - response time in milliseconds: 6761
+1 < 200
+1 < Date: Sat, 04 Apr 2026 14:59:26 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: PUT, OPTIONS, DELETE, POST, GET
+1 < x-powered-by: Phusion Passenger(R) 6.1.2
+1 < status: 200 OK
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=bGGCeRCevtrLq1JsZ9o3eDa5vu%2FyMBFQGXfIg%2FwZhqBhQgWeL9wxPERK1Wv3Aw3mcxwoumIgAK5t92SVzjgQWUbPdtKBCQvi4Gd2nEDk%2BsCNqAEqF1tHm%2BUkboGDU3H78farwTXOsGSh"}]}
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=7,cfOrigin;dur=372
+1 < CF-RAY: 9e712d48cb9adaf9-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit & Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]}
+
+09:59:27.509 [main] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:27.572 [main] DEBUG com.intuit.karate - request:
+1 > GET https://automationexercise.com/api/productsList
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:59:27.978 [main] DEBUG com.intuit.karate - response time in milliseconds: 406
+1 < 200
+1 < Date: Sat, 04 Apr 2026 14:59:27 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: POST, OPTIONS, PUT, GET, DELETE
+1 < x-powered-by: Phusion Passenger(R) 6.1.2
+1 < status: 200 OK
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=X8hrqJ5QBub79dlcw%2FNc91lcDUpts9vr6%2BlcDVhhPKVAfYc8GKeOtoHHxhXYPjKornqDGJZTc%2FsJcWfg0UXUoYVpNbzO8TFQ9avS9GnFyNX2IeExKBGiWRiukLm66tCyN3wi2tIGZgHm"}]}
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=6,cfOrigin;dur=156
+1 < CF-RAY: 9e712d510f4b25e3-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit & Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]}
+
+09:59:28.165 [main] ERROR com.intuit.karate - classpath:examples/products/products.feature:17
+And match response.products == '#[] #notempty'
+class java.util.LinkedHashMap cannot be cast to class java.lang.String (java.util.LinkedHashMap and java.lang.String are in module java.base of loader 'bootstrap')
+classpath:examples/products/products.feature:17
+09:59:28.306 [main] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:28.326 [main] DEBUG com.intuit.karate - request:
+1 > GET https://automationexercise.com/api/productsList
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:59:29.029 [main] DEBUG com.intuit.karate - response time in milliseconds: 702
+1 < 200
+1 < Date: Sat, 04 Apr 2026 14:59:28 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: POST, OPTIONS, PUT, GET, DELETE
+1 < x-powered-by: Phusion Passenger(R) 6.1.2
+1 < status: 200 OK
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=PvZgPnMdNn2yPWJXca%2BH25Om20C4ngvlz%2BpwjC0IQDC5WqKDdeH3jgOO5PHr4EZbNPWEh9q2x2VC76cwhxm7Rk8YfJ85drfD9CW4H9C7IX6kHmoL9GlfgID1FDfJyGG2RnQmfYi6SZDr"}]}
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=8,cfOrigin;dur=296
+1 < CF-RAY: 9e712d56af1ccc76-TPA
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit & Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]}
+
+09:59:29.279 [main] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:29.310 [main] DEBUG com.intuit.karate - request:
+1 > GET https://automationexercise.com/api/productsList
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:59:29.922 [main] DEBUG com.intuit.karate - response time in milliseconds: 610
+1 < 200
+1 < Date: Sat, 04 Apr 2026 14:59:29 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: POST, OPTIONS, PUT, GET, DELETE
+1 < x-powered-by: Phusion Passenger(R) 6.1.2
+1 < status: 200 OK
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=fpYAeYTYBUWZ39FrFjQFnI5Fv0oW%2FW5FQu9nvydJJor0%2Ff9AsGx%2BU9zbyolayHmCRsFvv69XCxnrGVXPy09pbYYC%2BS1qxFgo0LbRPIgl5lbLPxpiKZ9b6CtPEswTxP2j3YyqfxpRcaJF"}]}
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=8,cfOrigin;dur=310
+1 < CF-RAY: 9e712d5c1afda554-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit & Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]}
+
+09:59:30.034 [main] INFO  com.intuit.karate - karate.env system property was: null 
+09:59:30.052 [main] DEBUG com.intuit.karate - request:
+1 > GET https://automationexercise.com/api/productsList
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:59:30.644 [main] DEBUG com.intuit.karate - response time in milliseconds: 589
+1 < 200
+1 < Date: Sat, 04 Apr 2026 14:59:30 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: DELETE, OPTIONS, POST, PUT, GET
+1 < x-powered-by: Phusion Passenger(R) 6.1.2
+1 < status: 200 OK
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=LBoMGPHkNADBUXHPcJIQtc0tgC59oW3F3rmjVhaDDEhVd%2FS%2BeDmOGNvwamKb5B3M%2BDAJy1rm1zcDwkl87sWqR9u1qiciyXK5MHLwXL%2BOH7CjsCrYFQ2pnzCPljc7NTb06ahs2V9%2BbS%2FQ"}]}
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=5,cfOrigin;dur=298
+1 < CF-RAY: 9e712d60be40b4a2-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit & Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]}
+

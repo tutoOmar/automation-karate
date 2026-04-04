@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"examples\/products\/products[1:7]","start":1775314758468,"end":1775314767368,"title":"examples\/products\/products[1:7] 09:59:18.468-09:59:27.368 GET all products returns status 200"},{"id":2,"group":1,"content":"examples\/products\/products[2:12]","start":1775314767494,"end":1775314768164,"title":"examples\/products\/products[2:12] 09:59:27.494-09:59:28.164 Response body contains responseCode 200 and a non-empty products list","className":"failed"},{"id":3,"group":1,"content":"examples\/products\/products[3:19]","start":1775314768303,"end":1775314769200,"title":"examples\/products\/products[3:19] 09:59:28.303-09:59:29.200 Each product has the required fields with correct types"},{"id":4,"group":1,"content":"examples\/products\/products[4:37]","start":1775314769279,"end":1775314769970,"title":"examples\/products\/products[4:37] 09:59:29.279-09:59:29.970 First product matches the known Blue Top entry"},{"id":5,"group":1,"content":"examples\/products\/products[5:47]","start":1775314770029,"end":1775314770694,"title":"examples\/products\/products[5:47] 09:59:30.029-09:59:30.694 Products list contains items for all user types (Women, Men, Kids)"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
