@@ -1,4 +1,4 @@
-Feature: PUT method for user
+Feature: Delete method 
 
   Background:
     * url 'https://automationexercise.com/api'
@@ -32,7 +32,7 @@ Feature: PUT method for user
     And match response.message == 'User created!'
     * print 'User created'
 
-        # --- Step 2: GET user ---
+    # --- Step 2: GET user ---
     Given path '/getUserDetailByEmail'
     And param email = userEmail
     When method get

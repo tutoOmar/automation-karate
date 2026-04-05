@@ -1,12 +1,11 @@
-Feature: PUT method for user
+Feature: PUT method
 
   Background:
     * url 'https://automationexercise.com/api'
 
   Scenario: Update data in user and validate data
-  ## Load utils
     * def userUtils = call read('classpath:utils/user-utils.js')
-  ## Obtain current user data
+  #-- Obtain current user data
     * def userEmailExpected = 'ifritmaster360@gmail.com'
     Given path '/getUserDetailByEmail'
     And param email = userEmailExpected
@@ -15,7 +14,7 @@ Feature: PUT method for user
     And match response.responseCode == 200
     * def currentTitle = response.user.title
     * def currentName = response.user.name
-  ## Update account with new title
+  #-- Update account with new title
     * def newTitle = userUtils.generateUniqueTitle(currentTitle)
     Given path '/updateAccount'
     And form field name = currentName
@@ -26,7 +25,7 @@ Feature: PUT method for user
     Then status 200
     And match response.responseCode == 200
     And match response.message contains 'User updated!'
-  ## Verify the title was updated
+  #-- Verify the title was updated
     Given path '/getUserDetailByEmail'
     And param email = userEmailExpected
     When method get

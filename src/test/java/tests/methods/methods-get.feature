@@ -1,4 +1,4 @@
-Feature: Get method products
+Feature: Get methods
 
   Background:
     * url 'https://automationexercise.com/api'

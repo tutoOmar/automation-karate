@@ -1,4 +1,4 @@
-Feature: Post method products
+Feature: Post methods
 
   Background:
     * url 'https://automationexercise.com/api'
