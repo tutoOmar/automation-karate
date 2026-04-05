@@ -49,3 +49,28 @@ Feature: Post method products
     Then status 200
     And match response.responseCode == 200
     And match response.message contains 'User exists!'
+
+  Scenario: POST with invalid Login Credentials and right content type method in header
+    Given path '/verifyLogin'
+    And header Content-Type = 'application/x-www-form-urlencoded'
+    And form field email = 'bad-mail@gmail.com'
+    And form field password = 'BadPassWord'
+    When method post
+    Then status 200
+    And match response.responseCode == 404
+    And match response.message contains 'User not found!'
+
+  Scenario: Search product with form-urlencoded
+    Given path '/searchProduct'
+    And header Content-Type = 'application/x-www-form-urlencoded'
+    And form field search_product = 'top'
+    When method post
+    Then status 200
+    And match response.products != null
+
+  Scenario: Search product without parameter
+    Given path '/searchProduct'
+    When method post
+    Then status 200
+    And match response.responseCode == 400
+    And match response.message contains 'Bad request, search_product parameter is missing in POST request.'
