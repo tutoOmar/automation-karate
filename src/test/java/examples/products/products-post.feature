@@ -3,17 +3,19 @@ Feature: Post method products
   Background:
     * url 'https://automationexercise.com/api'
 
-    Scenario: POST on productsList should return 405 but return 200
+    Scenario: POST on productsList should return 405 in responseCode and return 200 in status
       Given path '/productsList'
       When method post
       Then status 200
+      And match response.responseCode == 405
+      And match response.message contains 'This request method is not supported'
 
-    Scenario: POST to verify Login with valid details
+    Scenario: POST to verify Login with valid details but Json Request
       * def data_for_login =
       """
       {
-        "email": "test@test.com",
-        "password":/verifyLogin
+        "email": "ifritmaster360@gmail.com",
+        "password":"Omar1234"
       }
       """
       Given path '/verifyLogin'
@@ -27,8 +29,8 @@ Feature: Post method products
     * def data_for_login_xml =
     """
       <user>
-        <email>test@test.com</email>
-        <password>Omarito</password>
+        <email>ifritmaster360@gmail.com</email>
+        <password>Omar1234</password>
       </user>
     """
     Given path '/verifyLogin'
@@ -38,3 +40,12 @@ Feature: Post method products
     Then status 415
     And match response.detail contains 'Unsupported media type'
 
+  Scenario: POST with valid Login Credentials and right content type method in header
+    Given path '/verifyLogin'
+    And header Content-Type = 'application/x-www-form-urlencoded'
+    And form field email = 'ifritmaster360@gmail.com'
+    And form field password = 'Omar1234'
+    When method post
+    Then status 200
+    And match response.responseCode == 200
+    And match response.message contains 'User exists!'
