@@ -1,4 +1,4 @@
-Feature: Products
+Feature: Get method products
 
   Background:
     * url 'https://automationexercise.com/api'
@@ -40,8 +40,3 @@ Feature: Products
     Given path '/noExistPath'
     When method get
     Then status 404
-
-  Scenario: Get products with invalid method
-    Given path '/productsList'
-    When method post
-    Then status 405
