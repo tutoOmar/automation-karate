@@ -26,7 +26,7 @@ Feature: PUT method for user
     Then status 200
     And match response.responseCode == 200
     And match response.message contains 'User updated!'
-  ## Verify the title was actually updated
+  ## Verify the title was updated
     Given path '/getUserDetailByEmail'
     And param email = userEmailExpected
     When method get

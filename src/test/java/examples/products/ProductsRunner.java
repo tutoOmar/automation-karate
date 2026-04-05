@@ -12,8 +12,12 @@ public class ProductsRunner {
         return Karate.run("products-post").relativeTo(getClass());
     }
     @Karate.Test
-    Karate putProducts() {
+    Karate putUser() {
         return Karate.run("user-put").relativeTo(getClass());
+    }
+    @Karate.Test
+    Karate deleteUser() {
+        return Karate.run("user-delete").relativeTo(getClass());
     }
 }
 
